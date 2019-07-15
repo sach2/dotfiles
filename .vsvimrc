@@ -1,0 +1,39 @@
+" for searching
+set hlsearch
+set incsearch " enable incremental search
+set ignorecase " defaults to ignore case
+set smartcase " search will be case sensitive if search pattern contains upper case character
+
+" use system clipboard always
+set clipboard=unnamed
+
+" line movement
+nnoremap <A-j> :vsc Edit.MoveSelectedLinesDown<CR>
+nnoremap <A-k> :vsc Edit.MoveSelectedLinesUp<CR>
+inoremap <A-Down> <C-o>:vsc Edit.MoveSelectedLinesDown<CR>
+inoremap <A-Up> <C-o>:vsc Edit.MoveSelectedLinesUp<CR>
+vnoremap <A-j> :vsc Edit.MoveSelectedLinesDown<CR>
+vnoremap <A-k> :vsc Edit.MoveSelectedLinesUp<CR>
+
+" undo/redo
+noremap <C-z> :vsc Edit.Undo<CR>
+noremap <C-y> :vsc Edit.Redo<CR>
+
+let mapleader="\<Space>"
+
+" commenting
+nnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+vnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+vnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+
+" navigation in insert mode, not working 
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-h> <Left>
+inoremap <A-l> <Right>
+
+" to escape
+imap hh <ESC> 
+
+noremap <C-f> :vsc Edit.Find<CR>
