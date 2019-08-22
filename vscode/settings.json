@@ -1,0 +1,170 @@
+{
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "files.autoSave": "afterDelay",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "explorer.confirmDragAndDrop": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  // "editor.fontFamily": "Segoe UI",
+  "terminal.integrated.shell.windows": "c:\\Windows\\System32\\cmd.exe",
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html",
+    "razor": "html"
+  },
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "terminal.integrated.rendererType": "canvas",
+  "terminal.integrated.fontFamily": "consolas",
+  "go.inferGopath": true,
+  "go.docsTool": "gogetdoc",
+  "go.useLanguageServer": true,
+  "go.gocodeAutoBuild": true,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Solarized Light+",
+  "go.autocompleteUnimportedPackages": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.easymotionKeys": "aoeuidhtns",
+  "vim.easymotionMarkerWidthPerChar": 10,
+  "vim.easymotionMarkerHeight": 15,
+  "vim.camelCaseMotion.enable": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "explorer.openEditors.visible": 5,
+  "debug.openExplorerOnEnd": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>",
+        "k"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "e"
+      ],
+      "commands": [
+        "breadcrumbs.focusAndSelect",
+      ],
+    },
+    {
+      "before": [
+        "leader",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.showAllEditors"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "j"
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "0"
+      ],
+      "after": [
+        "^"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "h",
+        "h"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.cursorStylePerMode.normal": "block-outline",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
+  "git.autofetch": true,
+  "editor.lineNumbers": "off",
+  "terminal.external.windowsExec": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.smartcase": true,
+  "go.coverOnSingleTest": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "toggle",
+  "vim.foldfix": true,
+  "vim.replaceWithRegister": true,
+  "vim.highlightedyank.enable": true,
+  "workbench.useExperimentalGridLayout": true,
+  "editor.fontFamily": "Microsoft Tai Le, Consolas, 'Courier New', monospace",
+  "editor.minimap.enabled": false,
+}
