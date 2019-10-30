@@ -15,6 +15,8 @@ Plug 'ptzz/lf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+colorscheme nord
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 " Better display for messages
