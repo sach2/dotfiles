@@ -1,0 +1,96 @@
+" for searching
+set hlsearch
+set incsearch " enable incremental search
+set ignorecase " defaults to ignore case
+set smartcase " search will be case sensitive if search pattern contains upper case character
+set number relativenumber
+set nu rnu
+
+set scrolloff=3
+
+" use system clipboard always
+set clipboard=unnamed
+
+let mapleader=","
+
+" commenting
+nnoremap <space>cc :vsc Edit.CommentSelection<CR>
+nnoremap <space>cu :vsc Edit.UncommentSelection<CR>
+vnoremap <space>cc :vsc Edit.CommentSelection<CR>
+vnoremap <space>cu :vsc Edit.UncommentSelection<CR>
+
+nnoremap <c-o> :vsc View.NavigateBackward<cr>
+nnoremap <c-i> :vsc View.NavigateForward<cr>
+
+nnoremap <Leader>tr :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+nnoremap <space><space> :vsc Edit.GoToAll<CR>
+nnoremap <space>. :vsc View.QuickActions<CR>
+nnoremap <space>pr :vsc Debug.StartWithoutDebugging<CR>
+nnoremap <space>pb :vsc Build.BuildSelection<CR>
+nnoremap <space>ww :vsc Window.NextDocumentWindow<CR>
+nnoremap <space>; A;<Esc>
+
+nnoremap cih ci(
+nnoremap cah ca(
+nnoremap dih di(
+nnoremap dah da(
+nnoremap cit ci{
+nnoremap cat ca{
+nnoremap dit di{
+nnoremap dat da{
+
+nnoremap <c-l> :nohlsearch<cr>
+nnoremap K :vsc Edit.QuickInfo<CR>
+nnoremap gwo :vsc FullScreen<cr>
+nnoremap gws :vsc Window.Split<cr>
+nnoremap gwc :vsc Window.Split<cr>
+nnoremap d<tab> :vsc Window.CloseDocumentWindow<cr>
+nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
+nnoremap gwH :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap gwL :vsc Window.MovetoNextTabGroup<cr>
+nnoremap gwS :vsc Window.NewHorizontalTabGroup<cr>
+nnoremap gwv :vsc Window.NewVerticalTabGroup<cr>
+nnoremap gwT :vsc Window.Float<cr>
+nnoremap gwj :vsc Window.NextSplitPane<cr>
+nnoremap gwk :vsc Window.PreviousSplitPane<cr>
+
+imap - <esc>
+
+nnoremap <space>a A
+nnoremap <space>i I
+
+nnoremap s /
+nnoremap S ?
+
+nnoremap <space>j /{<CR>
+nnoremap <space>k ?{<CR>
+
+nnoremap sj /{<CR>
+nnoremap sk ?{<CR>
+
+nnoremap sp /(<CR>
+nnoremap Sp ?(<CR>
+nnoremap <space>sp ?(<CR>
+
+nnoremap s. 0/\.\|,<CR>
+
+nnoremap sq /"<CR>
+nnoremap Sq ?"<CR>
+nnoremap <space>sq ?"<CR>
+
+nnoremap vd "_d
+xnoremap x  "_d
+nnoremap vD "_D
+nnoremap =p o<esc>p==
+nnoremap =P O<esc>p==
+xnoremap Y "+y
+nnoremap <space>t :vsc TestExplorer.RepeatLastRun<cr>
+" to escape
+imap ht <ESC> 
+
+noremap <C-f> :vsc Edit.Find<CR>
+nnoremap ,w :w<CR>
+nnoremap ,q :q<CR>
+nnoremap <Tab> %
+set nojoinspaces
+
