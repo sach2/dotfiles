@@ -1,0 +1,6 @@
+set drawbox on
+set shell zsh
+set hidden
+
+set EDITOR nvim
+
