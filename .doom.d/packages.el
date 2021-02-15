@@ -71,5 +71,4 @@
 ;; This is required for some packages whose defa
 
 (package! modus-themes)
-
 (package! plantuml-mode)

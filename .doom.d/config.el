@@ -108,3 +108,8 @@
 
 ;;(require 'modus-themes)
 ;;(modus-themes-load-themes)
+
+;; plantuml configuration
+(setq plantuml-jar-path "/home/sachin/Downloads/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)
+
