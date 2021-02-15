@@ -367,6 +367,9 @@ this with to-do items than with projects or headings."
     (org-agenda-goto)
     (+org/insert-item-below 1))
 
+;; Do not show deadline in org agenda if it is completed already.
+(setq org-agenda-skip-deadline-if-done t)
+
 ;; org agenda mode binding
 (map! :map evil-org-agenda-mode-map
   :m "n" 'org-agenda-next-item
