@@ -271,6 +271,7 @@ Callers of this function already widen the buffer view."
 (setq org-agenda-dim-blocked-tasks nil)
 
 (setq org-agenda-block-separator ?⎼)
+(setq org-agenda-block-separator ? )
 
 ; to execute
 (setq org-capture-templates
