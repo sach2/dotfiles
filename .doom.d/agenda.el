@@ -156,7 +156,7 @@ Callers of this function already widen the buffer view."
                 (tags-todo "-CANCELLED/!"
                  ((org-agenda-overriding-header "Stuck Projects")
                   (org-agenda-skip-function 'bh/skip-non-stuck-projects)
-                  (org-agenda-prefix-format "  %-20:c  %/b")
+                  (org-agenda-prefix-format "  %-15:c  %/b")
                   (org-agenda-sorting-strategy
                    '(category-keep))))
                 (tags-todo "-CANCELLED+WAITING|HOLD/!"
@@ -165,7 +165,7 @@ Callers of this function already widen the buffer view."
                                                                       ""
                                                                     " (including WAITING and SCHEDULED tasks)")))
                             ;;(org-agenda-skip-function 'bh/skip-non-tasks)
-                            (org-agenda-prefix-format "  %-20:c  %/b ")
+                            (org-agenda-prefix-format "  %-15:c  %/b ")
                             (org-tags-match-list-sublevels nil)
                             ;;(org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
                             ;;(org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
@@ -206,7 +206,7 @@ Callers of this function already widen the buffer view."
           ;; projects
                 (tags "+PROJECT"
                            ((org-agenda-overriding-header "Projects")
-                            (org-agenda-prefix-format "  %-30:c  %/b")
+                            (org-agenda-prefix-format "  %-15:c  %/b")
                             (org-agenda-sorting-strategy
                              '(priority-down category-keep))))
         ;; 5-day agenda
@@ -246,7 +246,7 @@ Callers of this function already widen the buffer view."
 
 (customize-set-variable 'org-agenda-fontify-priorities t)
 
-(setq org-agenda-prefix-format '((agenda . " %i %-20:c %-14t% s%-6e %/b ")
+(setq org-agenda-prefix-format '((agenda . " %i %-15:c %-14t% s%-6e %/b ")
                                  (tags . " %i %-12:c")
                                  (todo . " %i %-12:c")
                                  (search . " %i %-12:c")))
