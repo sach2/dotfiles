@@ -14,7 +14,7 @@
  '(objed-cursor-color "#9d0006")
  '(org-agenda-fontify-priorities t)
  '(package-selected-packages
-   '(plantuml-mode evil-collection mixed-pitch modus-vivendi-theme modus-themes go-mode lsp-mode))
+   '(marginalia embark orderless all-the-icons plantuml-mode evil-collection mixed-pitch modus-vivendi-theme modus-themes go-mode lsp-mode))
  '(pdf-view-midnight-colors (cons "#282828" "#fbf1c7"))
  '(rustic-ansi-faces
    ["#fbf1c7" "#9d0006" "#79740e" "#b57614" "#076678" "#b16286" "#427b58" "#282828"])

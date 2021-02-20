@@ -67,9 +67,6 @@
 (map! :n ",w" #'save-buffer)
 ;(map! :n ",h" #'avy-goto-char-2)
 
-(setq ivy-re-builders-alist
-      '((t . ivy--regex-ignore-order)))
-
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 
@@ -113,3 +110,17 @@
 (setq plantuml-jar-path "/home/sachin/Downloads/plantuml.jar")
 (setq plantuml-default-exec-mode 'jar)
 
+(use-package orderless
+  :ensure t
+  :custom (completion-styles '(orderless)))
+
+;(setq ivy-re-builders-alist
+      ;'((t . ivy--regex-ignore-order)))
+
+(setq ivy-re-builders-alist '((t . orderless-ivy-re-builder)))
+
+(use-package org-bullets
+    :ensure t
+        :init
+        (add-hook 'org-mode-hook (lambda ()
+                            (org-bullets-mode 1))))

@@ -396,3 +396,12 @@ this with to-do items than with projects or headings."
    "Jump to org headline: " org-agenda-files 10 t))
 
 (setq counsel-search-engine 'google)
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode))
+
+(use-package embark
+  :ensure t
+  :bind
+  ("C-9" . embark-act))
