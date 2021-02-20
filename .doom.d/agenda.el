@@ -274,29 +274,6 @@ Callers of this function already widen the buffer view."
 (setq org-agenda-block-separator ? )
 
 ; to execute
-(setq org-capture-templates
-      '(("s" "Scheduled Task" entry
-         (file "refile.org" )
-         "* %?\nSCHEDULED: %^t\n")
-        ("t" "Tasks")
-        ("tn" "Next Task" entry
-         (file "refile.org" )
-         "* NEXT %?\n :PROPERTIES:\n:Effort: %^{Effort}\n:END:")
-        ("tt" "Todo Task" entry
-         (file "refile.org" )
-         "* TODO %?\n :PROPERTIES:\n:Effort: %^{Effort}\n:END:")
-        ("d" "Deadline" entry
-         (file "refile.org" )
-         "* %?\nDEADLINE: %^t\n")
-        ("n" "Note" entry
-         (file "refile.org" )
-         "* %?\n")
-        ("p" "Project" entry
-         (file "sachin.org" )
-         "* TODO %?\n")
-        ("j" "Journal" entry (file+datetree "journal.org")
-         "* %?\nEntered on %U\n  %i")
-        ))
 (setq org-refile-targets '(("home.org" :level . 1)))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
@@ -396,3 +373,29 @@ this with to-do items than with projects or headings."
    "Jump to org headline: " org-agenda-files 10 t))
 
 (setq counsel-search-engine 'google)
+
+(use-package org
+  :config
+  (setq org-capture-templates
+        '(("s" "Scheduled Task" entry
+           (file "refile.org" )
+           "* %?\nSCHEDULED: %^t\n")
+          ("t" "Tasks")
+          ("tn" "Next Task" entry
+           (file "refile.org" )
+           "* NEXT %?\n :PROPERTIES:\n:Effort: %^{Effort}\n:END:")
+          ("tt" "Todo Task" entry
+           (file "refile.org" )
+           "* TODO %?\n :PROPERTIES:\n:Effort: %^{Effort}\n:END:")
+          ("d" "Deadline" entry
+           (file "refile.org" )
+           "* %?\nDEADLINE: %^t\n")
+          ("n" "Note" entry
+           (file "refile.org" )
+           "* %?\n")
+          ("p" "Project" entry
+           (file "sachin.org" )
+           "* TODO %?\n")
+          ("j" "Journal" entry (file+datetree "journal.org")
+           "* %?\nEntered on %U\n  %i")
+          )))
