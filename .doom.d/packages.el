@@ -72,6 +72,8 @@
 
 (package! modus-themes)
 (package! plantuml-mode)
+(package! consult)
+
 (package! embark)
 (package! orderless)
 (package! embark-consult)
