@@ -72,3 +72,4 @@
 
 (package! modus-themes)
 (package! plantuml-mode)
+(package! consult)

@@ -304,22 +304,14 @@ this with to-do items than with projects or headings."
 (setq shell-file-name "/bin/zsh")
 (customize-set-variable 'tramp-encoding-shell "/bin/zsh")
 
-(defun sr/ibuffer ()
-    "Mark the current TODO as done and add another task after it.
-Creates it at the same level as the previous task, so it's better to use
-this with to-do items than with projects or headings."
-    (interactive)
-    (ibuffer)
-    (counsel-grep-or-swiper))
-
 ;; my leader binding
 (map! :leader
   ;;; <leader> e --- sachin
   (:prefix-map ("e" . "sachin")
     :desc "Open Agenda"                 "a"   #'sr/open-agenda
     :desc "Open old Agenda"             "n"   #'sr/open-agenda2
-    :desc "switch buffer(other-window)" "b"   #'sr/ibuffer
-    :desc "switch buffer other window"  ",b"  #'counsel-switch-buffer-other-window
+    :desc "switch buffer(other-window)" "b"   #'consult-buffer
+    :desc "switch buffer other window"  ",b"  #'consult-buffer-other-window
     :desc "org headings"                "h"   #'counsel-org-goto-all
     :desc "M-x"                         "e"   #'counsel-M-x
     )
