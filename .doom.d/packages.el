@@ -72,10 +72,11 @@
 
 (package! modus-themes)
 (package! plantuml-mode)
-(package! consult)
 
 (package! embark)
-(package! orderless)
-(package! embark-consult)
 (package! consult)
+(package! embark-consult)
+(package! orderless)
 (package! org-bullets)
+(package! prescient)
+(package! selectrum-prescient)

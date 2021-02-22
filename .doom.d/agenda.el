@@ -304,6 +304,22 @@ this with to-do items than with projects or headings."
 (setq shell-file-name "/bin/zsh")
 (customize-set-variable 'tramp-encoding-shell "/bin/zsh")
 
+(defun sr/m-x ()
+  "M-x to be used with Selectrum"
+  (interactive)
+  (execute-extended-command 0))
+
+(defun sr/open-org-files()
+  "Open org files"
+  (interactive)
+  (let* ((default-directory (file-truename "~/org/")))
+    (call-interactively #'find-file)))
+
+(defun sr/ripgrep()
+  "my ripgrep wrapper"
+  (interactive)
+  (consult-ripgrep))
+
 ;; my leader binding
 (map! :leader
   ;;; <leader> e --- sachin
@@ -313,11 +329,28 @@ this with to-do items than with projects or headings."
     :desc "switch buffer(other-window)" "b"   #'consult-buffer
     :desc "switch buffer other window"  ",b"  #'consult-buffer-other-window
     :desc "org headings"                "h"   #'counsel-org-goto-all
-    :desc "M-x"                         "e"   #'counsel-M-x
+    :desc "M-x"                         "e"   #'sr/m-x
     )
   ;;; search extension s
   :n "sx" #'evil-ex-nohighlight
+  :n "sb" #'consult-line
+  :n "sd" #'sr/ripgrep
+  :n "fo" #'sr/open-org-files
   )
+
+;; search goodies
+(use-package evil-snipe
+  :config
+  (evil-snipe-mode +1)
+  (setq evil-snipe-scope 'visible)
+  (setq evil-snipe-spillover-scope t)
+  (evil-define-key '(normal motion) evil-snipe-local-mode-map
+    "s" nil)
+  (evil-define-key '(normal motion) evil-snipe-local-mode-map
+    "sa" 'evil-snipe-s
+    "ss" 'evil-snipe-s
+    "sb" 'consult-line
+    "sd" 'sr/ripgrep))
 
 (defun sr/org-add-child()
     "Mark the current TODO as done and add another task after it.
@@ -387,7 +420,7 @@ this with to-do items than with projects or headings."
           ("p" "Project" entry
            (file "sachin.org" )
            "* TODO %?\n")
-          ("j" "Journal" entry (file+datetree "journal.org")
+          ("j" "Journal" entry (file+olp+datetree "journal.org")
            "* %?\nEntered on %U\n  %i")
           )))
 

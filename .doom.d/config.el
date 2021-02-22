@@ -120,7 +120,10 @@
 (setq ivy-re-builders-alist '((t . orderless-ivy-re-builder)))
 
 (use-package org-bullets
-    :ensure t
-        :init
-        (add-hook 'org-mode-hook (lambda ()
-                            (org-bullets-mode 1))))
+  :init
+  (add-hook 'org-mode-hook (lambda ()
+                             (org-bullets-mode 1))))
+
+(use-package selectrum :init (selectrum-mode +1))
+(use-package prescient :config (prescient-persist-mode +1))
+(use-package selectrum-prescient :init (selectrum-prescient-mode +1) :after selectrum)
